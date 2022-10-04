@@ -1,0 +1,123 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cards{
+  display: grid;
+  grid-template: repeat(4,1fr) / repeat(8,1fr) ;
+  gap: 15px;
+}
+
+.card{
+ 
+  height: 104px;
+  width: 80px;
+  border: 1px solid #CDCDCD;
+  border-radius: 8px;
+  font-size: 24px;
+  text-align: center;
+  align-content: center;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.card:hover{
+  box-shadow: 2px 1px 5px #282827;
+
+}
+.inner{
+  display: none;
+}
+.card.flipped .inner{
+
+  display: block;
+
+}
+.card.flipped{
+  border: 1px solid #ED5517;
+  box-shadow: 2px 1px 5px #ED5517;
+}
+.inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.card.front{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card.front{
+  border: 2px solid #af1212;
+  background: #fff;
+
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #0A0A0C;
+
+}
+
+
+.front{
+  padding-top: 36px;
+}
+.mahjong{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 108px;
+}
+.card:hover{
+  border: 1px solid #0A0A0C;
+}
+
+.butt_restart:hover{
+  background: #dba8b1;
+  
+}
+
+.butt_restart{
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ED5517 ;
+  transition: 0.3s ease all;
+}
+
+.number_strokes{
+  font-size: 20px;
+  font-weight: bold;
+}
